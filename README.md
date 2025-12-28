@@ -1,14 +1,24 @@
-# Spider-Man Chisti Update Server
+# Spider-Man Chisti Update Server (Vercel)
 
-## Setup
+## Deploy to Vercel
+
 ```bash
 cd server
-python3 update_server.py
+npm install -g vercel  # if not installed
+vercel login
+vercel --prod
 ```
 
 ## API Endpoint
+
+After deployment, your URL will be:
 ```
-GET /check?version={current_version}
+https://your-project.vercel.app/api/check?version=1.0.0
+```
+
+Or use the short route:
+```
+https://your-project.vercel.app/check?version=1.0.0
 ```
 
 ## Responses
@@ -29,6 +39,7 @@ GET /check?version={current_version}
 ```
 
 ## GitHub Repository Structure
+
 Create repo: `uzairdeveloper223/spiderman-chisti-update`
 
 Files needed:
@@ -36,14 +47,19 @@ Files needed:
 - `changelog_1.0.1.txt` - Changelog for that version
 - `spiderman_chisti_1.0.1.apk` - The APK file
 
-## Example version.txt
-```
-1.0.1
+## Update Game Code
+
+After deploying, update the game's `update_manager.gd`:
+
+```gdscript
+const UPDATE_SERVER_URL = "https://your-project.vercel.app/api/check"
 ```
 
-## Example changelog_1.0.1.txt
+## Local Development
+
+```bash
+cd server
+vercel dev
 ```
-- New swinging mechanics
-- Better animations
-- Bug fixes
-```
+
+Then test: `http://localhost:3000/api/check?version=1.0.0`

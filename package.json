@@ -1,0 +1,13 @@
+{
+  "name": "spiderman-chisti-update-server",
+  "version": "1.0.0",
+  "description": "Update server for Spider-Man Chisti game",
+  "main": "api/check.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "keywords": ["game", "update", "vercel"],
+  "author": "Uzair",
+  "license": "MIT"
+}
