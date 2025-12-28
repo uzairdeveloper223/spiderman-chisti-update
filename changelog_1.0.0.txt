@@ -1,0 +1,11 @@
+Initial Release
+- Web swinging mechanics
+- Procedural city buildings
+- Touch joystick controls
+- Jump and fall animations
+- Settings menu (audio)
+- In-game pause menu
+- Exit to main menu
+- Update system
+- Feedback/bug reports
+- Credits page
